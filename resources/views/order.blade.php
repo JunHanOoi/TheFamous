@@ -1,6 +1,6 @@
 <table border="1">
   <tr>
-    <th>ID 12333</th>
+    <th>ID</th>
     <th>Book Id</th>
     <th>Customer Name</th>
     <th>Category</th>
