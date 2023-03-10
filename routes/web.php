@@ -15,10 +15,12 @@ use App\Http\Controllers\UserController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return redirect("login");
 });
+
+Route::view('login','login');
+Route::post('login',[UserController::class,'login']);
 
 Route::get("bookTableExample", [BookController::class, 'index']);
 Route::get("bookTable", [BookController::class, 'testData']);
@@ -26,5 +28,3 @@ Route::get("orderTable", [OrderController::class, 'testData']);
 
 Route::get('showOne', [OrderController::class, 'oneToOne']);
 
-Route::view('login','login');
-Route::post('login',[UserController::class,'login']);
