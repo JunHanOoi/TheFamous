@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Route::get("bookTable", [BookController::class, 'testData']);
 Route::get("orderTable", [OrderController::class, 'testData']);
 
 Route::get('showOne', [OrderController::class, 'oneToOne']);
+
+Route::view('login','login');
+Route::post('login',[UserController::class,'login']);
