@@ -12,7 +12,7 @@ body {
 	color: #fff;
 }
 .form {
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.45);
 	margin: auto auto;
 	padding: 40px;
 	border-radius: 5px;
@@ -47,6 +47,8 @@ body {
 	font-size: 18px;
 	padding: 10px;
 }
+select:invalid { color: gray; }
+
 </style>
 
 <body>
@@ -66,6 +68,13 @@ body {
                 <span class="text-danger fs-6">@error('password'){{$message}}@enderror</span>
             </div>
             <div class="pt-4">
+				<select required class="form-select form-select-lg" id="role" name="role">
+				<option value=""  selected hidden>-- Select Role --</option>
+				<option value="manager">Manager</option>
+				<option value="sales">Sales Associate</option>
+				</select>
+			</div>
+			<div class="pt-4">
                 <button type="submit">Login</button>
             </div> 
         </div>
