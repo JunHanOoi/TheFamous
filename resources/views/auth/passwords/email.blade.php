@@ -25,7 +25,7 @@
 </div>
                           <div class="form-group row">
                             <div class="pt-4">
-                            <label for="name" style="font-size:18px;" >{{ __('Enter email address') }}</label>
+                            <label for="email" style="font-size:18px;" >{{ __('Enter email address') }}</label>
                             <div class="pt-2">
                                 <input id="email" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
                                 placeholder="eg. email@domain.com">
